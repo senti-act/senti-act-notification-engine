@@ -11,7 +11,7 @@ const app = express()
 
 // API endpoint imports
 
-const port = process.env.NODE_PORT || 3007
+const port = process.env.NODE_PORT || 4000
 
 app.use(helmet())
 app.use(express.json())
@@ -24,7 +24,7 @@ app.use(cors())
 
 const startServer = () => {
 	app.listen(port, () => {
-		console.log('Senti Service started on port', port)
+		console.log('Senti.Act Notification Engine started on port', port)
 	}).on('error', (err) => {
 		if (err.errno === 'EADDRINUSE') {
 			console.log('Service not started, port ' + port + ' is busy')
