@@ -18,6 +18,7 @@ if [[ "$1" == "dev" ]]; then
 	rsync -r --quiet $2/ deploy@rey.webhouse.net:/srv/nodejs/senti/act/notification-engine/development
 	echo
 	echo Restarting Senti.Act Notification Engine service: $1 ...
+	ssh deploy@rey.webhouse.net 'sudo /srv/nodejs/senti/act/notification-engine/development/registerservice-development'
 	ssh deploy@rey.webhouse.net 'sudo /srv/nodejs/senti/act/notification-engine/development/scripts/service-restart.sh dev'
 	echo
 	echo Deployment to Senti.Act Notification Engine $1 and restart done!
