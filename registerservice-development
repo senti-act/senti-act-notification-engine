@@ -4,7 +4,7 @@ clear
 
 service_name=senti-act-notification-engine-dev.service
 service_dir=/etc/systemd/system
-server_dir=/srv/nodejs/senti/act/gateway/development
+server_dir=/srv/nodejs/senti/act/notification-engine/development
 
 service=$service_dir/$service_name
 
