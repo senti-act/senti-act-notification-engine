@@ -9,14 +9,15 @@ const express = require('express')
 const cors = require('cors')
 const helmet = require('helmet')
 const app = express()
-
+const bodyParser = require('body-parser')
 // API endpoint imports
 
 const port = process.env.NODE_PORT || 4000
 
 app.use(helmet())
-app.use(express.json())
-app.use(express.urlencoded({ extended: true }))
+app.use(bodyParser.json())
+// app.use(bodyParser.text())
+app.use(bodyParser.urlencoded({ extended: true }))
 
 app.use(cors())
 
