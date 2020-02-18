@@ -1,5 +1,6 @@
 #!/usr/bin/env nodejs
-process.title = "senti_gateway"
+process.title = "senti-act-notification-engine"
+
 const dotenv = require('dotenv').config()
 if (dotenv.error) {
 	console.warn(dotenv.error)
