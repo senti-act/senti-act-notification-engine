@@ -8,13 +8,13 @@ server_dir=/srv/nodejs/senti/act/notification-engine/production
 
 service=$service_dir/$service_name
 
-echo Registering Senti Gateway service for production ...
+echo Registering Senti.Act Notification Engine service for production ...
 
 
 if [ ! -e "$service" ]; then
 	echo
     echo "Senti.Act Notification Engine service is not installed"
-	echo "Installing Senti .Act Notification Engine service ..."
+	echo "Installing Senti.Act Notification Engine service ..."
 	sudo cp $server_dir/$service_name $service_dir/$service_name
 	echo "Enabling $service ..."
 	sudo systemctl enable $service_name

@@ -8,7 +8,7 @@ server_dir=/srv/nodejs/senti/act/notification-engine/development
 
 service=$service_dir/$service_name
 
-echo Registering Senti Gateway service for development ...
+echo Registering Senti.Act Notification Engine service for development ...
 
 
 if [ ! -e "$service" ]; then
